@@ -28,17 +28,14 @@ public class ControllerHandle {
 	public String testandoHandle() {
 
 		handleService.testeHandle(1);
-
 		return "teste";
 	}
 
 	@PostMapping(path = "/simulaSave", produces = MediaType.APPLICATION_JSON_VALUE)
-	public ResponseEntity<?> testandoHandle(@Valid @RequestBody Cliente cliente) {
+	public ResponseEntity<?> testandoHandleValidaCamposObjeto(@Valid @RequestBody Cliente cliente) {
 
-		System.out.println(cliente.getEmail());
-		
-		Cliente responseCliente = cliente;
-		
+		System.out.println(cliente.getEmail());		
+		Cliente responseCliente = cliente;		
 		return new ResponseEntity<>(responseCliente,HttpStatus.OK);
 	}
 }

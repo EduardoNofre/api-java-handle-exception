@@ -21,10 +21,10 @@ public class Cliente{
 	private String nome;
 
 	@NotNull
-	@NotBlank
-	@NotEmpty
+	@NotBlank(message = "O campo telefone não pode esta em  branco")
 	private String telefone;
 
 	@Email(message = "O e-mail esta fora do padrão de e-mail")
+	@NotBlank(message = "O campo e-mail não pode esta em  branco")
 	private String email;
 }

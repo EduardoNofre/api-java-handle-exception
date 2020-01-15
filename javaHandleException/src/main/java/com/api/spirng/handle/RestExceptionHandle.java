@@ -42,7 +42,9 @@ public class RestExceptionHandle {
 				.status(HttpStatus.NOT_FOUND.value())
 				.titulo("Valor do campo invalido")
 				.detalheErro("Valor do campo invalido")
-				.classeErro(methodArgumentNotValidException.getClass().getName()).field(campo).fieldMessage(campoMsg) .build();
+				.classeErro(methodArgumentNotValidException.getClass().getName())
+				.campo(campo)
+				.campoMessage(campoMsg) .build();
 		return new ResponseEntity<>(buildValidationHandle, HttpStatus.NOT_FOUND);
 	}
 }

@@ -7,7 +7,7 @@ import lombok.experimental.SuperBuilder;
 @SuperBuilder
 public class BuildValidationHandle extends ErroDetalheModel {
 
-	private String field;
-	private String fieldMessage;
+	private String campo;
+	private String campoMessage;
 
 }
